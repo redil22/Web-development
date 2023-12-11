@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #d0112b 0%, #d0112b 50%, #000000 50%);
+    color: #333;
+}
+
+
+h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #d0112b; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000; 
+    text-decoration: underline;
+}
+header {
+    background-color: #000000; 
+    color: #d0112b; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #000000; 
+    color: #d0112b; 
+    text-align: center;
+    padding: 10px 0;
+}
+nav {
+    background-color: #202020; /* Dark background for contrast */
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white; 
+    padding: 15px 25px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin: 0 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: #d0112b; 
+    transform: scale(1.1); 
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px; 
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #d0112b; 
+}
+
+main ul {
+    padding: 15px;
+    list-style-position: inside;
+}
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: #d0112b; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9c0e22; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+
+#weather {
+    background-color: #f2f2f2; 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    max-width: 300px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+}
+
+
+#weather h3 {
+    color: #333333; 
+    margin-bottom: 15px; 
+}
+
+
+#weather-info {
+    color: #555555; 
+    line-height: 1.6; 
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <h1>AC Milan Store</h1>
+    </header>
+    <img src="https://store.acmilan.com/cdn/shop/files/Box_2000x2000_bfb819a2-8576-4329-93f4-52b0ddcfa1ef_800x.jpg?v=1668594185">
+    <nav>
+        <ul>
+            <b><a href="index.html">Home </a></b>
+            <b><a href="about.html">About </a></b>
+            <b><a href="contact.html">Contact </a></b>
+            <b><a href="product.html">Product </a></b>
+            <b><a href="services.html">Services</a></b>
+
+        </ul>
+
+        <div id="weather">
+            <h3>Weather Details</h3>
+            <p id="weather-info"></p>
+        </div>
+        
+        <div class="form-container">
+        <form id="signupForm">
+            <h2>Signup Form</h2>
+            <input type= "text" id ="firstName" placeholder="First Name" required> 
+            <input type= "text" id ="lastName" placeholder="Last Name" required> 
+            <input type= "text" id ="city" placeholder="City" required> 
+            <input type= "text" id ="address" placeholder="Address" required> 
+            <input type="text" id="postalCode" placeholder="Postal Code (a0a0a0)" required>
+            <input type="text" id="province" placeholder="Province (QC, ON, MN, SK, AB, BC)" required>
+            <input type="number" id="age" placeholder="Age" min="18" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <button type="button" id="clearButton">Clear</button>
+
+        </form>
+    </div>
+    </nav>
+
+
+    <main>
+        <h2>Enjoy The Tour to Our Site</h2>
+        <p>AC MIlan Store offers a great variety of products.</p>
+
+        <h2>Products</h2>
+        <ul>
+            <li>Furnitures</li>
+            <li>Electronics</li>
+            <li>Clothes</li>
+            <li>Household equipments</li>
+            <li>Toys</li>
+        </ul>
+
+        <h2>Shop by Product</h2>
+        <ul>
+            <li>Daily Needs</li>
+            <li>Seasonal</li>
+            <li>Electronic Gadgets</li>
+            <li>Winter clothes</li>
+            <li>Football Jerseys</li>
+        </ul>
+
+        <h2>Store</h2>
+        <ul>
+            <li>Shop online and In-store</li>
+            <li>Sign Up for our Newsletter</li>
+        </ul>
+
+        <div>
+            AC Milan Store<br>
+            12010 XYZ Trails Road<br>
+            Zephyr, CA 95555<br>
+            888-555-5555<br>
+        </div>
+    </main>
+
+    <footer>
+        <p><small><i>Copyright &copy; 2023 AC Milan Products</i></small></p>
+        <p><a href="mailto:rlito@myseneca.com">Redi</a></p>
+    </footer>
+
+
+
+<script src="myfile.js"></script> 
+</body>
+</html>
